@@ -1,0 +1,57 @@
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.letter {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    animation: bilol 2s infinite ease-in-out;
+    display: flex;
+}
+
+
+.letter:nth-child(1) {
+    animation-delay: 0s;
+}
+.letter:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.letter:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.letter:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.letter:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+@keyframes bilol {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        color: red;
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0) rotate(360deg);
+        color: yellow;
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20px) rotate(720deg);
+        color: lime;
+        opacity: 0.8;
+    }
+}
